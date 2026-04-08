@@ -73,7 +73,7 @@ const translations = {
     "portfolio.viewAll": "Ver Todos os Projetos",
     "portfolio.ytJobs": "Perfil YT Jobs",
     "shorts.tag": "Conteúdo Vertical",
-    "shorts.title": "Vídeos Curtos",
+    "shorts.title": "Verticais",
     "channels.tag": "Clientes",
     "channels.title": "Canais que Editei",
     "services.tag": "O Que Eu Faço",
