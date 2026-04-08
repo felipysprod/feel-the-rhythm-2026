@@ -6,10 +6,26 @@ import { motion } from "framer-motion";
 import { useLanguage } from '@/context/LanguageContext';
 
 const shorts = [
-  { id: 1, url: "https://www.instagram.com/p/DQKhQoBD7WD/", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop" },
-  { id: 2, url: "https://www.instagram.com/p/DNOBlZduoLE/", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop" },
-  { id: 3, url: "https://www.instagram.com/p/DJHhIEPxZKO/", image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop" },
-  { id: 4, url: "https://www.instagram.com/p/DKLORqeN97X/", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop" },
+  { 
+    id: 1, 
+    url: "https://www.instagram.com/p/DQKhQoBD7WD/", 
+    image: "https://www.instagram.com/p/DQKhQoBD7WD/media/?size=l" 
+  },
+  { 
+    id: 2, 
+    url: "https://www.instagram.com/p/DNOBlZduoLE/", 
+    image: "https://www.instagram.com/p/DNOBlZduoLE/media/?size=l" 
+  },
+  { 
+    id: 3, 
+    url: "https://www.instagram.com/p/DJHhIEPxZKO/", 
+    image: "https://www.instagram.com/p/DJHhIEPxZKO/media/?size=l" 
+  },
+  { 
+    id: 4, 
+    url: "https://www.instagram.com/p/DKLORqeN97X/", 
+    image: "https://www.instagram.com/p/DKLORqeN97X/media/?size=l" 
+  },
 ];
 
 const Shorts = () => {
@@ -38,8 +54,13 @@ const Shorts = () => {
             >
               <img 
                 src={short.image} 
-                alt="Short" 
+                alt="Short Thumbnail" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  // Fallback if Instagram media endpoint is restricted
+                  const target = e.target as HTMLImageElement;
+                  target.src = `https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&auto=format&fit=crop`;
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl shadow-red-600/40">
