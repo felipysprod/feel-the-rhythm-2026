@@ -18,7 +18,7 @@ const translations = {
     "nav.channels": "Channels",
     "nav.about": "About",
     "nav.quote": "Get a Quote",
-    "hero.title": "FAKEZXC EDITOR",
+    "hero.title": "FELIPYS EDITOR",
     "hero.subtitle": "Video Editor — Premiere Pro - After Effects",
     "hero.scroll": "Scroll",
     "portfolio.tag": "Selected Works",
@@ -29,7 +29,7 @@ const translations = {
     "shorts.title": "Short Videos",
     "channels.tag": "Clients",
     "channels.title": "Channels I've Edited",
-    "about.tag": "FAKEZXC EDITOR",
+    "about.tag": "FELIPYS EDITOR",
     "about.title": "About Me",
     "about.p1": "I'm 20 years old and I'm passionate about video editing. I've been working with Adobe Premiere for over 4 years and with After Effects for about 2 years, continuously developing my skills in the audiovisual field.",
     "about.quote": "I enjoy testing new editing styles and finding ways to give each video its own unique identity. I always strive to evolve, learn different techniques, and apply creativity to every project I work on.",
@@ -42,7 +42,7 @@ const translations = {
     "contact.tag": "Let's Work Together",
     "contact.title": "Get a Quote",
     "contact.p": "Liked what you saw? Reach out via one of the platforms below.",
-    "footer.rights": "© 2026 FAKEZXC EDITOR — All rights reserved"
+    "footer.rights": "© 2026 FELIPYS EDITOR — All rights reserved"
   },
   PT: {
     "nav.home": "Início",
@@ -51,7 +51,7 @@ const translations = {
     "nav.channels": "Canais",
     "nav.about": "Sobre",
     "nav.quote": "Orçamento",
-    "hero.title": "FAKEZXC EDITOR",
+    "hero.title": "FELIPYS EDITOR",
     "hero.subtitle": "Editor de Vídeo — Premiere Pro - After Effects",
     "hero.scroll": "Rolar",
     "portfolio.tag": "Trabalhos Selecionados",
@@ -62,7 +62,7 @@ const translations = {
     "shorts.title": "Vídeos Curtos",
     "channels.tag": "Clientes",
     "channels.title": "Canais que Editei",
-    "about.tag": "FAKEZXC EDITOR",
+    "about.tag": "FELIPYS EDITOR",
     "about.title": "Sobre Mim",
     "about.p1": "Tenho 20 anos e sou apaixonado por edição de vídeo. Trabalho com Adobe Premiere há mais de 4 anos e com After Effects há cerca de 2 anos, desenvolvendo continuamente minhas habilidades no campo audiovisual.",
     "about.quote": "Gosto de testar novos estilos de edição e encontrar formas de dar a cada vídeo sua própria identidade única. Sempre busco evoluir, aprender diferentes técnicas e aplicar criatividade em cada projeto em que trabalho.",
@@ -75,7 +75,7 @@ const translations = {
     "contact.tag": "Vamos Trabalhar Juntos",
     "contact.title": "Peça um Orçamento",
     "contact.p": "Gostou do que viu? Entre em contato através de uma das plataformas abaixo.",
-    "footer.rights": "© 2026 FAKEZXC EDITOR — Todos os direitos reservados"
+    "footer.rights": "© 2026 FELIPYS EDITOR — Todos os direitos reservados"
   }
 };
 

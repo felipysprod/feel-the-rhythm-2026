@@ -29,7 +29,7 @@ const Hero = () => {
           className="w-32 h-32 rounded-full border-4 border-red-600 overflow-hidden mb-8 shadow-2xl shadow-red-600/40"
         >
           <img 
-            src="https://api.dicebear.com/7.x/avataaars/svg?seed=fakezxc" 
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=felipys" 
             alt="Logo" 
             className="w-full h-full object-cover bg-white"
           />
