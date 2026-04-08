@@ -1,9 +1,10 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Play, Youtube, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import VideoModal from './VideoModal';
 
 const projects = [
   { id: 1, title: "Minecraft Survival", category: "Gameplay", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
@@ -15,6 +16,8 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+
   return (
     <section id="portfolio" className="py-32 px-6 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto">
@@ -31,6 +34,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
+              onClick={() => setSelectedProject(project)}
               className="group relative aspect-video rounded-2xl overflow-hidden cursor-pointer bg-zinc-900"
             >
               <img 
@@ -64,6 +68,12 @@ const Portfolio = () => {
           </Button>
         </div>
       </div>
+
+      <VideoModal 
+        isOpen={!!selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+        title={selectedProject?.title}
+      />
     </section>
   );
 };
