@@ -9,7 +9,6 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const projects = [
   { id: 1, title: "Minecraft Survival", category: "Gameplay", videoId: "mf5WGJJVnAI", image: "https://img.youtube.com/vi/mf5WGJJVnAI/maxresdefault.jpg" },
-  { id: 2, title: "Cinematic Montage", category: "Motion Graphics", videoId: "wuS9uQS_FAs", image: "https://img.youtube.com/vi/wuS9uQS_FAs/maxresdefault.jpg" },
   { id: 3, title: "Tech Review", category: "Talking Head", videoId: "y0gchfhewF8", image: "https://img.youtube.com/vi/y0gchfhewF8/maxresdefault.jpg" },
   { id: 4, title: "Vlog Edit", category: "Vlog", videoId: "KbbKy1AUg_w", image: "https://img.youtube.com/vi/KbbKy1AUg_w/maxresdefault.jpg" },
   { id: 5, title: "Gaming Highlights", category: "Gameplay", videoId: "e4eXLfE3Ixs", image: "https://img.youtube.com/vi/e4eXLfE3Ixs/maxresdefault.jpg" },
