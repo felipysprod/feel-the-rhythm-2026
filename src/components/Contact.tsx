@@ -3,18 +3,21 @@
 import React from 'react';
 import { MessageCircle, Disc as Discord, Twitter } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '@/context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 px-6 bg-[#0a0a0a] border-t border-white/5">
       <div className="max-w-6xl mx-auto text-center">
         <div className="mb-12">
-          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Let's Work Together</span>
-          <h2 className="text-6xl font-black text-white uppercase italic mt-2">Get a Quote</h2>
+          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('contact.tag')}</span>
+          <h2 className="text-6xl font-black text-white uppercase italic mt-2">{t('contact.title')}</h2>
         </div>
 
         <p className="text-gray-400 text-sm mb-12">
-          Liked what you saw? Reach out via one of the platforms below.
+          {t('contact.p')}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">

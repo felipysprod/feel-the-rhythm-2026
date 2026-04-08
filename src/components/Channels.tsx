@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { useLanguage } from '@/context/LanguageContext';
 
 const channels = [
   { name: "Smurfzin", subs: "2.13M subs", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=smurf" },
@@ -14,6 +15,7 @@ const channels = [
 
 const Channels = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useLanguage();
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % channels.length);
   const prev = () => setCurrentIndex((prev) => (prev - 1 + channels.length) % channels.length);
@@ -23,8 +25,8 @@ const Channels = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 flex justify-between items-end">
           <div>
-            <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Clients</span>
-            <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">Channels I've Edited</h2>
+            <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('channels.tag')}</span>
+            <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('channels.title')}</h2>
           </div>
           
           <div className="hidden md:flex gap-4 mb-2">

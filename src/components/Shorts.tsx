@@ -3,6 +3,7 @@
 import React from 'react';
 import { Play } from 'lucide-react';
 import { motion } from "framer-motion";
+import { useLanguage } from '@/context/LanguageContext';
 
 const shorts = [
   { id: 1, image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop" },
@@ -12,12 +13,14 @@ const shorts = [
 ];
 
 const Shorts = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="shorts" className="py-32 px-6 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Vertical Content</span>
-          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">Short Videos</h2>
+          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('shorts.tag')}</span>
+          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('shorts.title')}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

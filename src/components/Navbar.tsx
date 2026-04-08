@@ -1,26 +1,27 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLanguage } from '@/context/LanguageContext';
 
 const Navbar = () => {
-  const [lang, setLang] = useState<'EN' | 'PT'>('EN');
+  const { lang, setLang, t } = useLanguage();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
       <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-2 flex items-center gap-8">
         <div className="flex items-center gap-6 text-sm font-medium text-gray-300">
-          <a href="#home" className="hover:text-white transition-colors">Home</a>
-          <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
-          <a href="#shorts" className="hover:text-white transition-colors">Shorts</a>
-          <a href="#channels" className="hover:text-white transition-colors">Channels</a>
-          <a href="#about" className="hover:text-white transition-colors">About</a>
+          <a href="#home" className="hover:text-white transition-colors">{t('nav.home')}</a>
+          <a href="#portfolio" className="hover:text-white transition-colors">{t('nav.portfolio')}</a>
+          <a href="#shorts" className="hover:text-white transition-colors">{t('nav.shorts')}</a>
+          <a href="#channels" className="hover:text-white transition-colors">{t('nav.channels')}</a>
+          <a href="#about" className="hover:text-white transition-colors">{t('nav.about')}</a>
         </div>
         
         <div className="flex items-center gap-4">
           <Button variant="destructive" size="sm" className="rounded-full bg-red-600 hover:bg-red-700 text-xs font-bold px-4 shadow-lg shadow-red-600/20">
-            Get a Quote →
+            {t('nav.quote')} →
           </Button>
           
           <div 

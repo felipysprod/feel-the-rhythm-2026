@@ -5,6 +5,7 @@ import { Play, Youtube, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import VideoModal from './VideoModal';
+import { useLanguage } from '@/context/LanguageContext';
 
 const projects = [
   { id: 1, title: "Minecraft Survival", category: "Gameplay", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
@@ -17,13 +18,14 @@ const projects = [
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const { t } = useLanguage();
 
   return (
     <section id="portfolio" className="py-32 px-6 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">Selected Works</span>
-          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">Portfolio</h2>
+          <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('portfolio.tag')}</span>
+          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('portfolio.title')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -60,11 +62,11 @@ const Portfolio = () => {
 
         <div className="flex flex-wrap justify-center gap-6">
           <Button variant="outline" className="rounded-full border-white/10 bg-white/5 text-white hover:bg-white/10 text-xs font-bold uppercase px-10 py-6 h-auto tracking-widest">
-            View All Projects
+            {t('portfolio.viewAll')}
           </Button>
           <Button variant="destructive" className="rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase px-10 py-6 h-auto tracking-widest flex gap-3 shadow-xl shadow-red-600/20">
             <Youtube size={20} />
-            YT Jobs Profile
+            {t('portfolio.ytJobs')}
           </Button>
         </div>
       </div>

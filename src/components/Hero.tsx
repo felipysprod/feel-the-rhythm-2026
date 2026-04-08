@@ -2,11 +2,13 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
+import { useLanguage } from '@/context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
       <motion.div 
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -39,7 +41,7 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-6xl md:text-9xl font-black tracking-tighter text-white mb-2 uppercase italic leading-none"
         >
-          FAKEZXC EDITOR
+          {t('hero.title')}
         </motion.h1>
         
         <motion.p 
@@ -48,7 +50,7 @@ const Hero = () => {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="text-gray-400 tracking-[0.4em] text-[10px] md:text-xs font-bold uppercase"
         >
-          Video Editor — Premiere Pro - After Effects
+          {t('hero.subtitle')}
         </motion.p>
       </div>
 
@@ -58,7 +60,7 @@ const Hero = () => {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
       >
-        <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase">Scroll</span>
+        <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase">{t('hero.scroll')}</span>
         <div className="w-[1px] h-12 bg-red-600" />
       </motion.div>
     </section>
