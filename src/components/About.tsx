@@ -5,7 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { useLanguage } from '@/context/LanguageContext';
 
-const tags = ["Gameplay", "Motion Graphics", "Documentary", "Storytelling", "Talking Heads", "Tutorials", "Reels & Shorts", "Podcast", "Color Grading", "Vlog"];
+const tags = [
+  "Sound Design", 
+  "Motion Graphics", 
+  "Scriptwriting", 
+  "Content Management", 
+  "3D Intros", 
+  "Gaming Montages", 
+  "Brand Storytelling", 
+  "Soundtrack Selection", 
+  "Viewer Retention", 
+  "Adobe Premiere", 
+  "After Effects"
+];
 
 const About = () => {
   const { t } = useLanguage();
@@ -53,7 +65,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp1')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">5+</span>
+                <span className="text-6xl font-black text-red-600 italic">10+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>
@@ -68,7 +80,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp2')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">9+</span>
+                <span className="text-6xl font-black text-red-600 italic">5+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>
