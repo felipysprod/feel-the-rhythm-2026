@@ -1,27 +1,45 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from '@/context/LanguageContext';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#home", label: t('nav.home') },
+    { href: "#portfolio", label: t('nav.portfolio') },
+    { href: "#shorts", label: t('nav.shorts') },
+    { href: "#services", label: t('nav.services') },
+    { href: "#channels", label: t('nav.channels') },
+    { href: "#about", label: t('nav.about') },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
-      <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-2 flex items-center gap-8">
-        <div className="flex items-center gap-6 text-sm font-medium text-gray-300">
-          <a href="#home" className="hover:text-white transition-colors">{t('nav.home')}</a>
-          <a href="#portfolio" className="hover:text-white transition-colors">{t('nav.portfolio')}</a>
-          <a href="#shorts" className="hover:text-white transition-colors">{t('nav.shorts')}</a>
-          <a href="#channels" className="hover:text-white transition-colors">{t('nav.channels')}</a>
-          <a href="#about" className="hover:text-white transition-colors">{t('nav.about')}</a>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-6">
+      <div className="w-full max-w-4xl bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-4 md:px-6 py-2 flex items-center justify-between md:justify-center gap-4 md:gap-8">
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="md:hidden text-white p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-white transition-colors">{link.label}</a>
+          ))}
         </div>
         
         <div className="flex items-center gap-4">
           <a href="#contact">
-            <Button variant="destructive" size="sm" className="rounded-full bg-red-600 hover:bg-red-700 text-xs font-bold px-4 shadow-lg shadow-red-600/20">
+            <Button variant="destructive" size="sm" className="rounded-full bg-red-600 hover:bg-red-700 text-[10px] md:text-xs font-bold px-3 md:px-4 shadow-lg shadow-red-600/20">
               {t('nav.quote')} →
             </Button>
           </a>
@@ -41,6 +59,22 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 top-20 bg-black/95 backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center gap-8 p-6 animate-in fade-in slide-in-from-top-4">
+          {navLinks.map((link) => (
+            <a 
+              key={link.href} 
+              href={link.href} 
+              className="text-2xl font-black uppercase italic text-white hover:text-red-600 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
