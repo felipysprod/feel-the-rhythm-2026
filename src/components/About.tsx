@@ -53,7 +53,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp1')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">4</span>
+                <span className="text-6xl font-black text-red-600 italic">5+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>
@@ -68,7 +68,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp2')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">2</span>
+                <span className="text-6xl font-black text-red-600 italic">9+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>

@@ -60,14 +60,13 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          <Button variant="outline" className="rounded-full border-white/10 bg-white/5 text-white hover:bg-white/10 text-xs font-bold uppercase px-10 py-6 h-auto tracking-widest">
-            {t('portfolio.viewAll')}
-          </Button>
-          <Button variant="destructive" className="rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase px-10 py-6 h-auto tracking-widest flex gap-3 shadow-xl shadow-red-600/20">
-            <Youtube size={20} />
-            {t('portfolio.ytJobs')}
-          </Button>
+        <div className="flex justify-center">
+          <a href="https://ytjobs.co/talent/profile/507799" target="_blank" rel="noopener noreferrer">
+            <Button variant="destructive" className="rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase px-10 py-6 h-auto tracking-widest flex gap-3 shadow-xl shadow-red-600/20">
+              <Youtube size={20} />
+              {t('portfolio.ytJobs')}
+            </Button>
+          </a>
         </div>
       </div>
 

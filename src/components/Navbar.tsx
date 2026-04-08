@@ -20,9 +20,11 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Button variant="destructive" size="sm" className="rounded-full bg-red-600 hover:bg-red-700 text-xs font-bold px-4 shadow-lg shadow-red-600/20">
-            {t('nav.quote')} →
-          </Button>
+          <a href="#contact">
+            <Button variant="destructive" size="sm" className="rounded-full bg-red-600 hover:bg-red-700 text-xs font-bold px-4 shadow-lg shadow-red-600/20">
+              {t('nav.quote')} →
+            </Button>
+          </a>
           
           <div 
             className="flex items-center gap-2 text-[10px] font-bold cursor-pointer select-none"
