@@ -9,22 +9,22 @@ const shorts = [
   { 
     id: 1, 
     url: "https://www.instagram.com/p/DQKhQoBD7WD/", 
-    image: "https://www.instagram.com/p/DQKhQoBD7WD/media/?size=l" 
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" 
   },
   { 
     id: 2, 
     url: "https://www.instagram.com/p/DNOBlZduoLE/", 
-    image: "https://www.instagram.com/p/DNOBlZduoLE/media/?size=l" 
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" 
   },
   { 
     id: 3, 
     url: "https://www.instagram.com/p/DJHhIEPxZKO/", 
-    image: "https://www.instagram.com/p/DJHhIEPxZKO/media/?size=l" 
+    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop" 
   },
   { 
     id: 4, 
     url: "https://www.instagram.com/p/DKLORqeN97X/", 
-    image: "https://www.instagram.com/p/DKLORqeN97X/media/?size=l" 
+    image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800&auto=format&fit=crop" 
   },
 ];
 
@@ -50,23 +50,21 @@ const Shorts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer bg-zinc-900 block"
+              className="group relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer bg-zinc-900 block border border-white/5 hover:border-red-600/50 transition-colors duration-500"
             >
               <img 
                 src={short.image} 
                 alt="Short Thumbnail" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                onError={(e) => {
-                  // Fallback if Instagram media endpoint is restricted
-                  const target = e.target as HTMLImageElement;
-                  target.src = `https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&auto=format&fit=crop`;
-                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl shadow-red-600/40">
-                  <Instagram className="text-white" size={24} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-2xl shadow-red-600/40 transform scale-90 group-hover:scale-100 transition-transform duration-500">
+                  <Instagram className="text-white" size={28} />
                 </div>
               </div>
+              
+              {/* Decorative corner element */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-red-600 rounded-full animate-pulse" />
             </motion.a>
           ))}
         </div>
