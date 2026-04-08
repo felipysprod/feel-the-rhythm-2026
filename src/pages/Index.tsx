@@ -11,12 +11,16 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ScrollProgress from '@/components/ScrollProgress';
+import NoiseOverlay from '@/components/NoiseOverlay';
+import BackToTop from '@/components/BackToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-red-600 selection:text-white overflow-x-hidden">
       <CustomCursor />
       <ScrollProgress />
+      <NoiseOverlay />
+      <BackToTop />
       <Navbar />
       <main>
         <Hero />
