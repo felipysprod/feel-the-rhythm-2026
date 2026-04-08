@@ -8,12 +8,13 @@ import VideoModal from './VideoModal';
 import { useLanguage } from '@/context/LanguageContext';
 
 const projects = [
-  { id: 1, title: "Minecraft Survival", category: "Gameplay", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop" },
-  { id: 2, title: "Cinematic Montage", category: "Motion Graphics", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop" },
-  { id: 3, title: "Tech Review", category: "Talking Head", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop" },
-  { id: 4, title: "Vlog Edit", category: "Vlog", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop" },
-  { id: 5, title: "Gaming Highlights", category: "Gameplay", image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop" },
-  { id: 6, title: "Documentary Style", category: "Storytelling", image: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&auto=format&fit=crop" },
+  { id: 1, title: "Minecraft Survival", category: "Gameplay", videoId: "mf5WGJJVnAI", image: "https://img.youtube.com/vi/mf5WGJJVnAI/maxresdefault.jpg" },
+  { id: 2, title: "Cinematic Montage", category: "Motion Graphics", videoId: "wuS9uQS_FAs", image: "https://img.youtube.com/vi/wuS9uQS_FAs/maxresdefault.jpg" },
+  { id: 3, title: "Tech Review", category: "Talking Head", videoId: "y0gchfhewF8", image: "https://img.youtube.com/vi/y0gchfhewF8/maxresdefault.jpg" },
+  { id: 4, title: "Vlog Edit", category: "Vlog", videoId: "KbbKy1AUg_w", image: "https://img.youtube.com/vi/KbbKy1AUg_w/maxresdefault.jpg" },
+  { id: 5, title: "Gaming Highlights", category: "Gameplay", videoId: "e4eXLfE3Ixs", image: "https://img.youtube.com/vi/e4eXLfE3Ixs/maxresdefault.jpg" },
+  { id: 6, title: "Documentary Style", category: "Storytelling", videoId: "GuVbtAMxJUM", image: "https://img.youtube.com/vi/GuVbtAMxJUM/maxresdefault.jpg" },
+  { id: 7, title: "Creative Edit", category: "Motion Graphics", videoId: "2UwBO-WSCik", image: "https://img.youtube.com/vi/2UwBO-WSCik/maxresdefault.jpg" },
 ];
 
 const Portfolio = () => {
@@ -74,6 +75,7 @@ const Portfolio = () => {
         isOpen={!!selectedProject} 
         onClose={() => setSelectedProject(null)} 
         title={selectedProject?.title}
+        videoId={selectedProject?.videoId}
       />
     </section>
   );

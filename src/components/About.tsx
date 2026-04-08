@@ -81,7 +81,7 @@ const About = () => {
               className="sm:col-span-2 bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-12 text-center shadow-2xl shadow-red-600/20"
             >
               <span className="text-white/60 text-[10px] font-black uppercase tracking-[0.3em]">{t('about.impact')}</span>
-              <div className="text-7xl font-black text-white mt-2 italic tracking-tighter">+500.0K</div>
+              <div className="text-7xl font-black text-white mt-2 italic tracking-tighter">+3.76M</div>
               <p className="text-white/80 font-bold uppercase tracking-widest text-xs mt-2">{t('about.views')}</p>
             </motion.div>
           </div>

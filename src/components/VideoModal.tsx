@@ -7,11 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  videoUrl?: string;
+  videoId?: string;
   title?: string;
 }
 
-const VideoModal = ({ isOpen, onClose, videoUrl, title }: VideoModalProps) => {
+const VideoModal = ({ isOpen, onClose, videoId, title }: VideoModalProps) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -36,15 +36,27 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }: VideoModalProps) => {
               <X size={20} />
             </button>
 
-            <div className="w-full h-full flex items-center justify-center">
-              {/* Placeholder for actual video player */}
-              <div className="text-center">
-                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                  <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+            <div className="w-full h-full">
+              {videoId ? (
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                  title={title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-center">
+                  <div>
+                    <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent ml-1" />
+                    </div>
+                    <h3 className="text-white font-bold text-xl">{title || "Video Preview"}</h3>
+                    <p className="text-gray-400 text-sm mt-2">Video player would load here</p>
+                  </div>
                 </div>
-                <h3 className="text-white font-bold text-xl">{title || "Video Preview"}</h3>
-                <p className="text-gray-400 text-sm mt-2">Video player would load here</p>
-              </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
