@@ -55,7 +55,8 @@ const Shorts = () => {
               <img 
                 src={short.image} 
                 alt="Short Thumbnail" 
-                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${short.id === 2 ? 'object-right' : ''}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                style={short.id === 2 ? { objectPosition: 'right 25px center' } : {}}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                 <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-2xl shadow-red-600/40 transform scale-90 group-hover:scale-100 transition-transform duration-500">
