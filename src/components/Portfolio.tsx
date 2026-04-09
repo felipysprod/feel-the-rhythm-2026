@@ -8,12 +8,12 @@ import VideoModal from './VideoModal';
 import { useLanguage } from '@/context/LanguageContext';
 
 const projects = [
-  { id: 1, title: "Minecraft Survival", category: "Gameplay", videoId: "mf5WGJJVnAI", image: "https://img.youtube.com/vi/mf5WGJJVnAI/maxresdefault.jpg" },
-  { id: 3, title: "Tech Review", category: "Talking Head", videoId: "y0gchfhewF8", image: "https://img.youtube.com/vi/y0gchfhewF8/maxresdefault.jpg" },
-  { id: 4, title: "Vlog Edit", category: "Vlog", videoId: "KbbKy1AUg_w", image: "https://img.youtube.com/vi/KbbKy1AUg_w/maxresdefault.jpg" },
-  { id: 5, title: "Gaming Highlights", category: "Gameplay", videoId: "e4eXLfE3Ixs", image: "https://img.youtube.com/vi/e4eXLfE3Ixs/maxresdefault.jpg" },
-  { id: 6, title: "Documentary Style", category: "Storytelling", videoId: "GuVbtAMxJUM", image: "https://img.youtube.com/vi/GuVbtAMxJUM/maxresdefault.jpg" },
-  { id: 7, title: "Creative Edit", category: "Motion Graphics", videoId: "2UwBO-WSCik", image: "https://img.youtube.com/vi/2UwBO-WSCik/maxresdefault.jpg" },
+  { id: 1, title: "THE COMEBACK...", category: "Announcement", videoId: "mf5WGJJVnAI", image: "https://img.youtube.com/vi/mf5WGJJVnAI/maxresdefault.jpg" },
+  { id: 2, title: "I FOUND A EX TEAMMATE IN MY LOBBY", category: "Gameplay", videoId: "y0gchfhewF8", image: "https://img.youtube.com/vi/y0gchfhewF8/maxresdefault.jpg" },
+  { id: 3, title: "Fortnite New Season, First Impressions", category: "Gameplay", videoId: "KbbKy1AUg_w", image: "https://img.youtube.com/vi/KbbKy1AUg_w/maxresdefault.jpg" },
+  { id: 4, title: "Akdov - NEGUIN DE MAUÁ (MIXTAPE)", category: "Visualizer", videoId: "e4eXLfE3Ixs", image: "https://img.youtube.com/vi/e4eXLfE3Ixs/maxresdefault.jpg" },
+  { id: 5, title: "PROLEVEL - Fortnite Course Trailer", category: "Announcement", videoId: "GuVbtAMxJUM", image: "https://img.youtube.com/vi/GuVbtAMxJUM/maxresdefault.jpg" },
+  { id: 6, title: "Stuck with U + Your Name", category: "Lyric Video", videoId: "2UwBO-WSCik", image: "https://img.youtube.com/vi/2UwBO-WSCik/maxresdefault.jpg" },
 ];
 
 const Portfolio = () => {
@@ -42,7 +42,7 @@ const Portfolio = () => {
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
+                className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1 group-hover:opacity-50"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                 <span className="text-red-600 text-[10px] font-black uppercase tracking-widest mb-1">{project.category}</span>
