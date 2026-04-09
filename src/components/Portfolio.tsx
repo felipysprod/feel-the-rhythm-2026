@@ -25,7 +25,7 @@ const Portfolio = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('portfolio.tag')}</span>
-          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('portfolio.title')}</h2>
+          <h2 className="text-5xl md:text-6xl font-black text-white uppercase mt-2">{t('portfolio.title')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

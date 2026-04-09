@@ -66,7 +66,7 @@ const Navbar = () => {
             <a 
               key={link.href} 
               href={link.href} 
-              className="text-2xl font-black uppercase italic text-white hover:text-red-600 transition-colors"
+              className="text-2xl font-black uppercase text-white hover:text-red-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}

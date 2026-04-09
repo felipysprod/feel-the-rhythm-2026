@@ -36,7 +36,7 @@ const Process = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-20 text-center">
           <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('process.tag')}</span>
-          <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('process.title')}</h2>
+          <h2 className="text-5xl md:text-6xl font-black text-white uppercase mt-2">{t('process.title')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -61,7 +61,7 @@ const Process = () => {
                 {step.icon}
               </div>
               
-              <h3 className="text-white font-bold text-xl mb-4 uppercase italic">{step.title}</h3>
+              <h3 className="text-white font-bold text-xl mb-4 uppercase">{step.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
@@ -69,7 +69,7 @@ const Process = () => {
       </div>
       
       {/* Background Decorative Text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/[0.02] uppercase italic pointer-events-none select-none whitespace-nowrap">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/[0.02] uppercase pointer-events-none select-none whitespace-nowrap">
         Workflow
       </div>
     </section>

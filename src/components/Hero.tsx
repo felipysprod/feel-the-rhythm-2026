@@ -46,7 +46,7 @@ const Hero = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-gray-400 tracking-[0.5em] text-[10px] md:text-sm font-black uppercase"
+          className="text-gray-400 tracking-[0.1em] text-[10px] md:text-sm font-normal uppercase"
         >
           {t('hero.subtitle')}
         </motion.p>

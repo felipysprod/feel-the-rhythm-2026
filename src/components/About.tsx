@@ -34,12 +34,12 @@ const About = () => {
           >
             <div className="mb-10">
               <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('about.tag')}</span>
-              <h2 className="text-5xl md:text-6xl font-black text-white uppercase italic mt-2">{t('about.title')}</h2>
+              <h2 className="text-5xl md:text-6xl font-black text-white uppercase mt-2">{t('about.title')}</h2>
             </div>
             
             <div className="space-y-8 text-gray-400 text-base leading-relaxed">
               <p>{t('about.p1')}</p>
-              <div className="border-l-4 border-red-600 pl-8 italic text-white text-lg font-medium bg-white/5 py-6 pr-6 rounded-r-xl">
+              <div className="border-l-4 border-red-600 pl-8 text-white text-lg font-medium bg-white/5 py-6 pr-6 rounded-r-xl">
                 "{t('about.quote')}"
               </div>
               <p>{t('about.p2')}</p>
@@ -65,7 +65,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp1')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">10+</span>
+                <span className="text-6xl font-black text-red-600">10+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>
@@ -80,7 +80,7 @@ const About = () => {
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em]">Experience</span>
               <h3 className="text-white font-bold text-lg mt-2">{t('about.exp2')}</h3>
               <div className="flex items-baseline gap-3 mt-4">
-                <span className="text-6xl font-black text-red-600 italic">5+</span>
+                <span className="text-6xl font-black text-red-600">5+</span>
                 <span className="text-gray-400 text-sm font-bold uppercase tracking-widest">{t('about.years')}</span>
               </div>
             </motion.div>
@@ -93,7 +93,7 @@ const About = () => {
               className="sm:col-span-2 bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-12 text-center shadow-2xl shadow-red-600/20"
             >
               <span className="text-black/60 text-[10px] font-black uppercase tracking-[0.3em]">{t('about.impact')}</span>
-              <div className="text-7xl font-black text-black mt-2 italic tracking-tighter">+3.76M</div>
+              <div className="text-7xl font-black text-black mt-2 tracking-tighter">+3.76M</div>
               <p className="text-black/80 font-bold uppercase tracking-widest text-xs mt-2">{t('about.views')}</p>
             </motion.div>
           </div>

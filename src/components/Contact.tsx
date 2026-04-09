@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto text-center">
         <div className="mb-12">
           <span className="text-red-600 text-xs font-bold tracking-widest uppercase">{t('contact.tag')}</span>
-          <h2 className="text-6xl font-black text-white uppercase italic mt-2">{t('contact.title')}</h2>
+          <h2 className="text-6xl font-black text-white uppercase mt-2">{t('contact.title')}</h2>
         </div>
 
         <p className="text-gray-400 text-sm mb-12">

@@ -13,7 +13,6 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import NoiseOverlay from '@/components/NoiseOverlay';
 import BackToTop from '@/components/BackToTop';
-import LightEffects from '@/components/LightEffects';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 const Index = () => {
@@ -22,7 +21,6 @@ const Index = () => {
       <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-red-600 selection:text-white overflow-x-hidden relative">
         <ScrollProgress />
         <NoiseOverlay />
-        <LightEffects />
         <BackToTop />
         <Navbar />
         <main>
