@@ -76,7 +76,7 @@ const translations = {
     "nav.services": "Serviços",
     "nav.quote": "Contato",
     "hero.title": "FELIPYS EDITOR",
-    "hero.subtitle": "Editor de Vídeo — Premiere Pro - After Effects",
+    "hero.subtitle": "EDITOR DE CONTEÚDO — MOTION DESIGNER",
     "hero.scroll": "Rolar",
     "portfolio.tag": "Trabalhos Selecionados",
     "portfolio.title": "Portfólio",
