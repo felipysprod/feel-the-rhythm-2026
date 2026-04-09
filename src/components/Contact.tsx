@@ -21,10 +21,12 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <Button className="rounded-full bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold px-8 flex gap-2">
-            <MessageCircle size={18} />
-            WhatsApp
-          </Button>
+          <a href="https://wa.me/5515988071153" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full bg-[#25D366] hover:bg-[#25D366]/90 text-white font-bold px-8 flex gap-2">
+              <MessageCircle size={18} />
+              WhatsApp
+            </Button>
+          </a>
           <a href="http://x.com/felipysprod" target="_blank" rel="noopener noreferrer">
             <Button className="rounded-full bg-black border border-white/10 hover:bg-white/5 text-white font-bold px-8 flex gap-2">
               <Twitter size={18} />
